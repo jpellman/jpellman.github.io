@@ -275,6 +275,12 @@
 				width: 100%;
 			}
 
+/* General images */
+/* Attempting to fix images on mobile */
+img {
+	max-width: 100%;
+}
+	
 /* Icon */
 
 	.icon {
