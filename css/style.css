@@ -10,7 +10,7 @@
 /* Basic */
 
 	body, #skel-layers-wrapper {
-		background: #f3f6fa;
+		background: #101010;
 	}
 
 	body.is-loading * {
@@ -27,7 +27,7 @@
 	}
 
 	body, input, select, textarea {
-		color: #7c8081;
+		color: #ffffff;
 		font-family: 'Lato', sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
@@ -204,7 +204,7 @@
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		textarea:focus {
-			border-color: #83d3c9;
+			border-color: #660066;
 		}
 
 	input[type="text"],
@@ -529,7 +529,7 @@ img {
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		.button:hover {
-			background: rgba(188, 202, 206, 0.15);
+			background: rgba(153, 51, 153, 0.15);
 			border-color: inherit;
 		}
 
@@ -537,8 +537,8 @@ img {
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #83d3c9;
-			border-color: #83d3c9;
+			background: #660066;
+			border-color: #660066;
 			color: white !important;
 		}
 
@@ -578,7 +578,7 @@ img {
 		}
 
 		.wrapper.style2 {
-			background-color: #83d3c9;
+			background-color: #660066;
 			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
 			background-position: bottom left, bottom right;
 			background-repeat: no-repeat, no-repeat;
@@ -593,7 +593,7 @@ img {
 			.wrapper.style2 .button.special {
 				background: white;
 				border-color: white;
-				color: #83d3c9 !important;
+				color: #660066 !important;
 			}
 
 				.wrapper.style2 .button.special:hover {
@@ -607,7 +607,7 @@ img {
 		}
 
 		.wrapper.style4 {
-			background: white;
+			background-color: #660066;
 			color: inherit;
 			padding: 4em;
 		}
@@ -620,7 +620,7 @@ img {
 	@keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
 
 	#header {
-		background: white;
+		background: black;
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 		color: inherit;
 		cursor: default;
@@ -792,7 +792,7 @@ img {
 			}
 
 			.dropotron > li:hover > a {
-				background: #83d3c9;
+				background: #660066;
 				color: white;
 			}
 
@@ -879,7 +879,7 @@ img {
 /* Main */
 
 	#main {
-		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
+		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/light-bl.svg"), url("images/light-br.svg");
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: 25em;
@@ -927,7 +927,7 @@ img {
 /* Footer */
 
 	#footer {
-		background: #e8eef4;
+		background: #101010;
 		color: #7c8081;
 		padding: 5em 5em 10em 5em;
 		text-align: center;
