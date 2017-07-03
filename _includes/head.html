@@ -17,6 +17,23 @@
     <script src="/js/skel.min.js"></script>
     <script src="/js/skel-layers.min.js"></script>
     <script src="/js/init.js"></script>
+    # Randomize the banner image.
+    <script type="text/javascript">
+    $(document).ready(function() {
+    
+        var bgArray = ['banner.jpg','2011-09-23-134619.jpg'];
+        var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+    
+        $('banner').css('background-image', bg);
+    
+        // If you have defined a path for the images
+        var path = 'images';
+    
+        // then you can put it right before the variable 'bg'
+        $('banner').css('background-image','url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../'+ path+bg+'")');
+    
+    }); 
+    </script>
     <noscript>
         <link rel="stylesheet" href="/css/skel.css" />
         <link rel="stylesheet" href="/css/style.css" />
