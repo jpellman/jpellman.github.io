@@ -2,6 +2,7 @@
 layout: post
 title:  Scientific Shower Thoughts - The Holocaust, Contextual Psycholinguistics and Holograms
 date:   2018-04-14 00:26:52
+comments: true
 permalink: /sst-geodesic-domes.html
 ---
 
