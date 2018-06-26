@@ -16,7 +16,7 @@ What struck me in particular about the [Shoah Foundation's New Dimensions in Tes
 
 When I was working in the [LAB Lab](http://www.lab-lab.org/) as a research assistant we were studying speech processing in real-world contexts using high density EEG headsets (see [here](http://rstb.royalsocietypublishing.org/content/369/1651/20130297)).  We were using a methodology to localize brain activity based off electrical activity on the scalp using a [forward model](http://neuroimage.usc.edu/brainstorm/Tutorials/HeadModel) to describe how known electrical activity should look on the scalp and an [inverse model](http://neuroimage.usc.edu/brainstorm/Tutorials/SourceEstimation) to infer where novel data would be localized to given the forward model.  For a very short period, we were able to try out a piece of equipment that could capture the exact position of electrodes on an individual's skull, thus allowing one to better estimate the forward model for an individual participant.  [This piece of hardware](https://www.egi.com/clinical-division/clinical-division-clinical-products/clinical-division-geodesic-photogrammetry-system) was essentially a much smaller and more limited version of the geodesic dome used to record the Holocaust survivors (see below).
 
-| ![An EGI Geodesic Dome](images/egi_geodesic_dome.jpg){:class="img-responsive"}|
+| ![An EGI Geodesic Dome](images/2018-04-14-egi_geodesic_dome.jpg){:class="img-responsive"}|
 |:--:| 
 | *The mothership* |
 
