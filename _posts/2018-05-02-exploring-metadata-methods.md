@@ -5,6 +5,8 @@ date:   2018-05-02 00:23:26
 permalink: /metadata.html
 ---
 
+*TODO*: Add discussion of https://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-2-53
+
 Note: This is a didactic post (i.e., I'm using this as an exercise to teach myself something), and is prone to updates (i.e., I'm probably full of inchoate nonsense on some points and will get schooled later).  For a full list of differences, see this post's Github history.
 
 Recently, I converted a number of VHS / MiniDV home movies to MPEG-4s on a hard drive, primarily due to my apprehensions about the fallibility of tape media in the long-term, but also because VHS tapes a) take up too much space and b) aren't as portable as a thumb drive / external HD.  After finally finishing up the arduous procedure I used (perhaps a topic for another post), I discovered a new challenge.  While some of the tapes had timestamps overlayed on the footage, the files themselves did not contain this information.  It was now up to me to make sense of all these priceless home videos by generating some form descriptive and structural metadata for them so that generations of future relatives could enjoy all of my elementary school choir concerts.  But what exactly was the best way to approach this problem?
