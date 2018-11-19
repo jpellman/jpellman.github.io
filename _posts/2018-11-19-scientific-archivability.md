@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Meditations on the 'Archivability Crisis' in Science and the Long-Term Reproducibility of Scientific Analyses"
-date:   2018-11-17 23:59:59
+date:   2018-11-19 11:52:07 
 permalink: /scientific-archivability.html
 ---
 
