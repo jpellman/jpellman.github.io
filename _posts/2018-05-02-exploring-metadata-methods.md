@@ -1,20 +1,32 @@
 ---
 layout: post
-title:  "A Brief Overview of Methods for Adding Metadata to Files"
+title:  "A Prescriptive Taxonomy of Methods for Adding Metadata to Files"
 date:   2018-05-02 00:23:26
 permalink: /metadata.html
 ---
 
 *TODO*: Add discussion of https://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-2-53
+https://frictionlessdata.io/
+https://5stardata.info/en/
 
-Note: This is a didactic post (i.e., I'm using this as an exercise to teach myself something), and is prone to updates (i.e., I'm probably full of inchoate nonsense on some points and will get schooled later).  For a full list of differences, see this post's Github history.
+In my previous life as a neuroscience research assistant, I worked with an actively-developed data organization standard known as the [Brain Imaging Data Structure](http://bids.neuroimaging.io/) (BIDS).  Due to my experience working with BIDS, I became increasingly interested in methdologies used for capturing metadata related to scientific experiments and making datasets more discoverabley evolved into a more generalized interest in metadata management for digital formats.  The following is a summary of the methods I've come across, in part based on this [reddit post on r/datahoarder](https://www.reddit.com/r/DataHoarder/comments/7sqq7g/metadata_container_standard_for_arbitrary_files/) (and [this one](https://www.reddit.com/r/DataHoarder/comments/7jz2da/metadatatags_for_video_material/) as well), as well as my experiences working in an academic library.  It contains some strong opinions based off my experiences, and thus I have come to classify it as a "prescriptive taxonomy".
 
-Recently, I converted a number of VHS / MiniDV home movies to MPEG-4s on a hard drive, primarily due to my apprehensions about the fallibility of tape media in the long-term, but also because VHS tapes a) take up too much space and b) aren't as portable as a thumb drive / external HD.  After finally finishing up the arduous procedure I used (perhaps a topic for another post), I discovered a new challenge.  While some of the tapes had timestamps overlayed on the footage, the files themselves did not contain this information.  It was now up to me to make sense of all these priceless home videos by generating some form descriptive and structural metadata for them so that generations of future relatives could enjoy all of my elementary school choir concerts.  But what exactly was the best way to approach this problem?
+## Metadata Encoded in Filenames
 
-In my previous life as a neuroscience research assistant, I worked with an actively-developed data organization standard known as the [Brain Imaging Data Structure](http://bids.neuroimaging.io/) (BIDS).  Due to my experience working with BIDS, I became increasingly interested in methdologies used for capturing metadata related to scientific experiments and making datasets more discoverable, which ultimately evolved into a more generalized interest in metadata management.  The following is a summary of the methods I've come across, in part based on this [reddit post on r/datahoarder](https://www.reddit.com/r/DataHoarder/comments/7sqq7g/metadata_container_standard_for_arbitrary_files/) (and [this one](https://www.reddit.com/r/DataHoarder/comments/7jz2da/metadatatags_for_video_material/) as well), as well as my experiences working in an academic library.
+Many librarians specializing in data management will advise researchers to use descriptive filenames for their research (for instance [here](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming)).  In neuroimaging, the BIDS standard enforces the inclusion of metadata in the filename and directory structure by means of a number of key/value pairs separated by underscores, ending with the type of scan used.  For instance, a filename of ``sub-control01_T1w.nii.gz`` would indicate that the data within the file belongs to a participant (subject) designated ``control01`` and that the kind of scan used is a T1w scan (these are used to provide high fidelity images of basic gross anatomical stucture, without making claims about brain function).  A path of ``sub-01/ses-test/func/sub-01_ses-test_task-overtverbgeneration_run-1_bold.nii.gz`` would indicate that the data in the file correspond to the participant ``01``, obtained within session ``test`` of a multi-sessionn scan, during the first run of a task named ``overtverbgeneration``. 
 
+My conviction is that including metadata in a filename is better than nothing, and that there's certainly nothing wrong with using descriptive labels to aid researchers in their day-to-day lab work, but that relying upon filenames for metadata management and building software tooling that assumes a specific structure in a filename is an anti-pattern.  I have arrived at this conclusion through the following line of thought:
+
+ * The primary goal of creating metadata for scientific data is to minimize the amount of information about an experiment that is lost and to make data more discoverable.
+ * To minimize information loss, scientific metadata standards should be as robust to entropy as possible.
+ * Robustness to entropy is a function of the level of complexity used to encode data (redundancy, etc).
+ * The simplicity with which the operators used to encode metadata in filenames (file moves, file copies) within a computer operating system, and the ease with which someone could accidentally use these same operators to corrupt the metadata by changing a filename (thus leading to an increase in local entropy) makes information loss highly likely.
+ * If metadata about a dataset is lost, its discoverability also decreases.
+
+The flexibilty permitted by relying upon filenames for metadata poses other, potentially less philosophical problems.  From a technical standpoint, a large number of utilities and commercial products assume that filenames are encoded as ASCII text, and are painful to deal with if filenames are instead encoded with non-Latin characters in UTF-8. Similarly, a large number of Unix shell utilities privilege filenames without spaces.  In theory, a scientific metadata standard that wanted to rely upon filenames could prohibit UTF-8 characters and spaces in filenames, but it's not always clear from an end-user's perspective when some UTF-8 are used (i.e., for UTF-8 characters that look superficially identical to ASCII characters).
+ 
 ## Sidecar Files
-### Description
+
 With sidecar files, metadata about a file is stored in a serialized format like XML, JSON or YAML.  A relationship is established between the original file and its sidecar by having identical names save for the file extension.  A script or application can then easily read in both the original data and the metadata by stripping away the original file extension and checking for a corresponding file with the metadata format file extension instead.  Most often the metadata is stored as key-value pairs in an associative array, although this is true for most other methodologies of keeping metadata as well.
 ### Pros
  * Relatively flexible.  Easy to add metadata to a file without having to change a standard or use a metadata container format.
@@ -98,6 +110,3 @@ Examples:
 
 ## Conclusion
 
-So- how am I planning on recording and storing metadata about my old family videos?  I'm not entirely sure yet, although for now I'm sticking with a plain old CSV file, which I can pretty readily parse with a Python script and convert to sidecar files or use a library like the [Python XMP Toolkit](https://python-xmp-toolkit.readthedocs.io) to embed the metadata.  FEDORA is likely out of the question since it requires a lot of overhead and I don't require complex modeling of arbitrary types of data, and git-annex could be interesting, but I don't plan on copying individual parts of the collection to separate volumes in a way that would lend itself to decentralized tooling (although I can always tack it on later).
-
-One thing is for certain, however: I'd like to make sure that I can include video annotations in my metadata somehow, similar to how the Praat [TextGrid](http://www.fon.hum.uva.nl/praat/manual/Intro_7__Annotation.html) format works.  This is because such fine-grained annotations make life events more discoverable for future reflection.  Or perhaps the my convesion process just didn't do a good job at breaking some videos out into separate chapters :)
