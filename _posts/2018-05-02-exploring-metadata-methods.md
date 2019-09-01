@@ -7,6 +7,7 @@ permalink: /metadata.html
 
 *TODO*: Add discussion of https://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-2-53
 https://5stardata.info/en/
+schema.org / metadata fields in HTML5
 
 In my previous life as a neuroscience research assistant, I worked with on the development of a data organization standard known as the [Brain Imaging Data Structure](http://bids.neuroimaging.io/) (BIDS).  Due to my experience working with BIDS, I became increasingly interested in methdologies used for capturing metadata related to scientific experiments and making datasets more discoverable.  This evolved into a more generalized interest in metadata management for digital formats.  The following is a summary of the methods I've come across, in part based on this [reddit post on r/datahoarder](https://www.reddit.com/r/DataHoarder/comments/7sqq7g/metadata_container_standard_for_arbitrary_files/) (and [this one](https://www.reddit.com/r/DataHoarder/comments/7jz2da/metadatatags_for_video_material/) as well), as well as my experiences working in an academic library.  It is opinionated and thus I have come to classify it as a "prescriptive taxonomy".
 Not all of these opinions are 100% justified, and I aim to revisit this topic repeatedl, possibly revising this post multiple times in the future.
@@ -17,8 +18,7 @@ I approach this topic from the perspective of a former research assistant turned
 
 ### Metadata Encoded in Filenames
 
-Many librarians specializing in data management will advise researchers to use descriptive filenames for their research ([see here](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming)).  In neuroimaging, the BIDS standard enforces the inclusion of metadata in the filename and directory structure by means of a number of key/value pairs separated by underscores, ending with the type of scan used.  For instance, a filename of *sub-control01_T1w.nii.gz* would indicate that the data within the file belongs to a participant (subject) designated *control01* and that the kind of scan used is a T1w scan (these are used to provide high fidelity images of basic gross anatomical stucture, without making claims about brain function).  A path of *sub-01/ses-test/func/sub-01_ses-test_task-overtverbgeneration_run-1_bold.nii.gz* would indicate that the data in the file correspond to the participant *01*, obtained within session *test* of a multi-session scan, during the first run of a task named *overtverbgeneration*. 
-
+Many librarians specializing in data management will advise researchers to use descriptive filenames for their research ([see here](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming)).  
 #### Pros
  * It's relatively simple to encode experiment data in filenames, since it involves regular filesystem operations like moves and renames that pretty much anyone using a computer should be fluent in.  This makes this metadata encoding methodology incredibly easy to adopt, since the barrier to entry is low.
  * Useful for scientists in their day-to-day work as a way to describe what they're working with.
@@ -32,7 +32,7 @@ Many librarians specializing in data management will advise researchers to use d
 
 #### Examples
 
- * [BIDS](http://bids.neuroimaging.io/)
+ * [BIDS](http://bids.neuroimaging.io/): In neuroimaging, the BIDS standard enforces the inclusion of metadata in the filename and directory structure by means of a number of key/value pairs separated by underscores, ending with the type of scan used.  For instance, a filename of *sub-control01_T1w.nii.gz* would indicate that the data within the file belongs to a participant (subject) designated *control01* and that the kind of scan used is a T1w scan (these are used to provide high fidelity images of basic gross anatomical stucture, without making claims about brain function).  A path of *sub-01/ses-test/func/sub-01_ses-test_task-overtverbgeneration_run-1_bold.nii.gz* would indicate that the data in the file correspond to the participant *01*, obtained within session *test* of a multi-session scan, during the first run of a task named *overtverbgeneration*. 
  * [Brainstorm](https://neuroimage.usc.edu/brainstorm/Tutorials/BstFolders)
  
 ### Sidecar Files
@@ -54,8 +54,11 @@ With sidecar files, metadata about a file is stored in a serialized format like 
  * [Gmvault](http://gmvault.org/) Database Metadata: Gmvault stores metadata related to Gmail features that aren't part of e-mail standards / RFCs in sidecar JSON files with the thread number followed by the file extension ".meta".  That way, when end-users restore e-mails to Gmail, Gmail-specific features like labels and threading are preserved.
  * [BIDS](http://bids.neuroimaging.io/): The BIDS standard uses sidecar JSONs to represent information about experimental parameters that are not represented in the [NifTI file format](https://brainder.org/2012/09/23/the-nifti-file-format/)headers. These parameters are often scan parameters that exist in metadata assoicated with [DICOM](http://book.orthanc-server.com/dicom-guide.html#dicom-file-format) files that is lost when the DICOMs are converted to NifTIs.
  * [EML](https://knb.ecoinformatics.org/#tools/eml) : EML, similar to BIDS is a scientific metadata format.  It uses XML sidecar files to describe ecological data.
- * [Kodi](https://kodi.wiki/view/NFO_files) : Kodi is a popular open source media player that uses an [XML sidecar](https://kodi.wiki/view/NFO_files) with the ".nfo" suffix to store metadata about T.V. shows and movies.  ".nfo" files can also be used to scrape online databases like IMDB or combine data scraped from online databases with user-added metadata that's stored locally.  This, in some ways, mirrors more advanced ways of managing metadata like FEDORA (see below).  The ".nfo" files of Kodi are not to be confused with the [".nfo" files of the warez scene](https://en.wikipedia.org/wiki/.nfo).
+ * [Kodi](https://kodi.wiki/view/NFO_files) : Kodi is a popular open source media player that uses an [XML sidecar](https://kodi.wiki/view/NFO_files) with the ".nfo" suffix to store metadata about T.V. shows and movies.  ".nfo" files can also be used to scrape online databases like IMDB or combine data scraped from online databases with user-added metadata that's stored locally.  The ".nfo" files of Kodi are not to be confused with the [".nfo" files of the warez scene](https://en.wikipedia.org/wiki/.nfo).
  * [Frictionless Data](https://frictionlessdata.io)
+
+https://en.wikipedia.org/wiki/Metadata_repository
+https://en.wikipedia.org/wiki/Metadata_registry
 
 ## Using a Database or a Digital Asset Management (DAM) Tool
 
@@ -124,6 +127,8 @@ Examples:
 
  * [NetCDF](https://www.unidata.ucar.edu/software/netcdf/) (and by extension, [MINC](https://www.mcgill.ca/bic/software/minc))
  * [HDF5](https://support.hdfgroup.org/HDF5/)
+ * [DICOM](https://www.dicomstandard.org/)
 
 ## Conclusion
 
+My general belief is that metadata should be encoded first and foremost via one of the tightly-coupled methodologies.  These can always be downsampled to a loosely-coupled equivalent for further processing if that is desirable.
