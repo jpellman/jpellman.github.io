@@ -1,13 +1,9 @@
 ---
 layout: post
-title:  "Response to Formal Definitions of Reproducibility and How Computers Broke Reproduciblity"
-date:   2020-06-14 21:36:14
-permalink: /2020-reproducibility-responses.html
+title:  "The National Academies of Science and Engineering and ACM Definitions of Reproducibility"
+date:   2020-05-25 13:36:14
+permalink: /reproducibility-definitions.html
 ---
-
-It's been a while since I've written about scientific reproducibility, and I've accumulated quite a few opinions in the intervening months.  I'm not certain that my thoughts are totally mature, but I believe that even in an unrefined form, they are worth publishing on this site as part of the broader dialogue about scientific reproducibility.  The two short motifs that follow are responses to a conference discussion and an articles that I have encountered.  It's important to note beforehand that, while I feel confident in commenting on technical topics, I admittedly have not been fully keeping up with all of the discourse about reproducibility, so there are doubtless some blind spots that may be limiting my perspective.
-
-## The National Academies of Science and Engineering and ACM Definitions of Reproducibility
 
 In November of last year, I attended the [SC19](https://sc19.supercomputing.org/) conference, which brings together an assortment of computer scientists, systems administrators, and vendors.  One of the various birds of a feather sessions I attended ([The National Academies’ Report on Reproducibility and Replicability in Science: Inspirations for the SC Reproducibility Initiative](https://sc19.supercomputing.org/session/?sess=sess293)) discussed the issue of reproducibility in great detail.  The big news at this session was that several [operationalizations](https://en.wikipedia.org/wiki/Operationalization) for the concept of reproducibility that were developed independently by the ACM (see [here](https://www.acm.org/publications/policies/artifact-review-badging)) and the National Academies (see [here](https://doi.org/c5jp)) were being harmonized across the two organizations.
 
