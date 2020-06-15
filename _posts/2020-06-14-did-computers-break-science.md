@@ -8,7 +8,7 @@ permalink: /did-computers-break-science.html
 Recently I came across [an article](https://theconversation.com/how-computers-broke-science-and-what-we-can-do-to-fix-it-49938) (**How computers broke science – and what we can do to fix it** by Ben Marwick) that argues that electronic computers are breaking science.  Namely, computers are blamed for:
 
  * Making data processing methods more opaque and converting processes that were formerly transparent into black boxes.
- * Being too versatile, and thus complicating methods reporting in journal articles.  Furthermore, making it so that results are reproducible now involves documenting both your software and data management efforts.
+ * Being too versatile, and thus complicating methods reporting in journal articles.  Furthermore, making it so that making results reproducible now involves documenting both your software and data management efforts.
 
 While the article contains many positions that I agree with to varying degrees, such as increased sharing of data, the use of open source toolkits, the use of open formats, and a shift away from exclusively point-and-click applications, I find that the central premise- that computers in and of themselves have somehow disrupted the scientific process- to be poorly supported.  I do think that there is an element of truth to what the author says in this regard, and I think that by and large we are in agreement on finer matters, but I think that his central position lacks precision.
 
