@@ -7,7 +7,6 @@ description: > # this means to ignore newlines until "baseurl:"
   In our contemporary, post-industrial age a pervasive fear has arisen that, with increased automation, technology will replace the need for humanity. I believe that technology cannot replace humanity, and that this perspective that humans can be replaced should be discarded for a healthier view in which society perceives technology as a tool to accompany cognition rather than a stand-in for expertise and wisdom. Technology (as a tool) should be used to enable and ennoble humanity, augmenting our natural abilities just as previous tools such as hammers, quills, glasses, and printing presses have augmented us in the past. In my role as a technical professional, I would like to serve to help society leverage technology to make the world a better place. In brief, I like to bring a humanistic perspective to my work.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://libjpel.so"
-twitter_username: jaipelai
 github_username:  jpellman
 
 # Build settings
