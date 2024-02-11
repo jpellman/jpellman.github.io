@@ -1,11 +1,16 @@
-<!-- Footer -->
-<footer id="footer">
-    <ul>
-	Disclaimer: Posts are subject to amendment at any time and live in a state of "perpetual beta".  Revision histories may be viewed in full <a href=https://github.com/jpellman/jpellman.github.io/tree/master>here</a>.  Timestamps reflect the initial publish date.
-    </ul>
-    <ul class="copyright">
-        &copy; 2017-2020 John Pellman
-	<br><br>Design: <a href="http://html5up.net">HTML5 UP</a>
-    </ul>
+<footer>
+
+  <hr />
+  <table width="100%" border="0">
+    <tb>
+      <tr>This page online <code>{{ site.url }}{{ page.url }}</code></tr>
+      <tr>
+        <td>
+          <a href="/"><em>{{ site.author }}</em></a> &middot; <a href="mailto:{{ site.email }}"><em>{{ site.email }}</em></a>
+        </td>
+        <td align="right">Last updated: {{ page.updated }}</td>
+      </tr>
+    </tb>
+  </table>
 
 </footer>

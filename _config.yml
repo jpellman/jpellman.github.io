@@ -1,13 +1,18 @@
-# Site settings
+permalink: /:title/
+plugins:
+  - jekyll-sitemap
+
 title: John Pellman - Systems Administrator
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
+url: "https://libjpel.so"
+baseurl: "" # the subpath of your site, e.g. /blog/
+description: > # this means to ignore newlines until next key
   Greetings! My name is John Pellman. I am a system administrator / cognitive science geek in Manhattan. My interests lie at the intersection of science and IT, with a particular focus on how technology can facilitate progress in our understanding of the world and improve the human races quality of life.
 
   In our contemporary, post-industrial age a pervasive fear has arisen that, with increased automation, technology will replace the need for humanity. I believe that technology cannot replace humanity, and that this perspective that humans can be replaced should be discarded for a healthier view in which society perceives technology as a tool to accompany cognition rather than a stand-in for expertise and wisdom. Technology (as a tool) should be used to enable and ennoble humanity, augmenting our natural abilities just as previous tools such as hammers, quills, glasses, and printing presses have augmented us in the past. In my role as a technical professional, I would like to serve to help society leverage technology to make the world a better place. In brief, I like to bring a humanistic perspective to my work.
-baseurl: "" # the subpath of your site, e.g. /blog/
+email: john+website@libjpel.so
 url: "https://libjpel.so"
-github_username:  jpellman
 
-# Build settings
+timezone: America/New_York
+google_analytics_tracking_id: UA-39520634-1
+
 markdown: kramdown
