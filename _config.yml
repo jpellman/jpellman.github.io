@@ -3,6 +3,7 @@ plugins:
   - jekyll-sitemap
 
 title: John Pellman - Systems Administrator
+author: John Pellman
 url: "https://libjpel.so"
 baseurl: "" # the subpath of your site, e.g. /blog/
 description: > # this means to ignore newlines until next key
