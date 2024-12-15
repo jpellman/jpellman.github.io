@@ -6,7 +6,7 @@
       <tr>This page online <code>{{ site.url }}{{ page.url }}</code></tr>
       <tr>
         <td>
-          <a href="/"><em>{{ site.author }}</em></a> &middot; <span class="email"><b>{site.email_recipient}+</b>{site.email_recipient_alias}@{site.email_domain}<b>.{site.email_tld}</b>.</span>
+          <a href="/"><em>{{ site.author }}</em></a> &middot; <span class="email"><b>{{site.email_recipient}}+</b>{{site.email_recipient_alias}}@{{site.email_domain}}<b>.{{site.email_tld}}</b>.</span>
         </td>
         <td align="right">Last updated: {{ page.updated }}</td>
       </tr>
