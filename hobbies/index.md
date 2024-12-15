@@ -8,15 +8,19 @@ permalink: /hobbies
 
 I grew up in an academic household and was extensively involved in various neuroscience labs in my early career.  This has led me on occasion to hold lofty ambitions about pursuing a PhD purely for intrinsic reward.  Alas, it has become clear in my adulthood that a conventional academic career is not in the cards, and systems administration has proven to be a good way to pay the bills.
 
-These days I scratch my itch to live the life of the mind by engaging in citizen science projects.  While this constitutes only partial (and often peripheral) participation, I still find it gratifying.
+These days I scratch my itch to live the life of the mind by engaging in citizen science projects.  While this constitutes only partial (and mostly peripheral) participation, I still find it gratifying.
 
-In particular, I run distributed computing projects on the [BOINC platform](https://boinc.berkeley.edu/) or [Folding@home](http://folding.stanford.edu/) on my home computer.  The badges below indicate which projects I run and how many credits I’ve accrued.
+In particular, I run distributed computing projects on the [BOINC platform](https://boinc.berkeley.edu/) or [Folding@home](http://folding.stanford.edu/) on my home computer.  The badges below indicate which projects I run and how many credits I’ve accrued:
 
 ![My BOINC stats are temporarily out of order.](https://boincstats.com/signature/-1/user/3500755/sig.png)
 
 ![My Folding@Home stats are temporarily out of order.](https://apps.foldingathome.org/awards?user=332971)
 
 I also try to regularly go bird-watching and submit checklists of sightings to the Cornell Lab of Ornithology's eBird.  My eBird profile can be found [here](https://ebird.org/profile/Mjg5NTI3NQ).
+
+Occasionally, I have also interacted with projects on [Zooniverse](https://www.zooniverse.org/) and [Eyewire](https://eyewire.org/).
+
+Evidence of heavier past involvement in academia can be found on my [Google scholar page](https://scholar.google.com/citations?hl=en&user=-7fOg3wAAAAJ) and [ORCID](https://orcid.org/0000-0001-6810-4461). 
 
 ## Reading
 
@@ -26,7 +30,7 @@ I have a small home library containing a number of philosophical and reference w
 
 If I find something historical that I think might be interesting to society at large, I'll usually scan and upload it to the Internet Archive (my profile is [here](https://archive.org/details/@jpellman)).  In the past I used to run an [ArchiveTeam warrior](http://warrior.archiveteam.org/) but haven't done this lately.
 
-I've also digitized numerous documents from my childhood home for a small personal "family archive" of old VHS tapes, audio cassettes, etc.
+I've also digitized numerous documents from my childhood home for a small personal "family archive" of old VHS tapes, audio cassettes, etc that lives on my personal storage cloud / NAS.
 
 ## Technology / Retrocomputing
 
