@@ -2,7 +2,7 @@ permalink: /:title/
 plugins:
   - jekyll-sitemap
 
-title: John Pellman - Systems Administrator
+title: John Pellman's Dynamically Linked Library
 author: John Pellman
 url: "https://libjpel.so"
 baseurl: "" # the subpath of your site, e.g. /blog/
