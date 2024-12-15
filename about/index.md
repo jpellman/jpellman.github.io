@@ -13,6 +13,3 @@ In our contemporary, post-industrial age a pervasive fear has arisen that, with 
 My philosophical has outlook been influenced by the writings of Norbert Wiener, Hubert Dreyfus, Theodore Roszak, and Joseph Weizenbaum.
 
 Photo Credit: [Joaquin Ruales](http://joaquin.rual.es/)
-
-Photo credits for the banner images on this site may be found [here](photocredits.html).
-
