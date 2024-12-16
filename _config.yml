@@ -8,10 +8,6 @@ url: "https://libjpel.so"
 baseurl: "" # the subpath of your site, e.g. /blog/
 description: > # this means to ignore newlines until next key
   Greetings! My name is John Pellman. I am a Linux systems administrator  who is presently based in New York City (though I grew up in the chilly hinterlands of upstate New York). My interests lie at the intersection of science and computing, with a particular focus on how technology can facilitate progress in our understanding of the world and improve the human race’s quality of life.
-email_recipient: "john"
-email_recipient_alias: "wibmestir"
-email_domain: "libjpel"
-email_tld: "so"
 url: "https://libjpel.so"
 
 timezone: America/New_York
