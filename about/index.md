@@ -22,6 +22,6 @@ This website is my erratically updated blog.  Occasionally I will make posts abo
 
 * When I was younger and more carefree (circa 2014), I made the mistake of registering a domain under a Somali TLD and I've been forced to live with the consequences of this decision for more than a decade.  I thought it was cute and might even drive some traffic via the occasionally mistyped search.  Both of these things are true, but I didn't really appreciate [the complex geopolitical realities of TLDs](https://en.wikipedia.org/wiki/.so) at the time.
 * By reading the contents of this blog, you are mapping my thoughts into your memory and letting them running through your brain (with the major caveat that a brain is not really a computer at all).  When you close this site, you will unmap my thoughts from your short-term memory.  If you do not understand what I'm talking about (because you aren't a technologist or computer scientist; i.e., you're normal), please refer to [here](https://en.wikipedia.org/wiki/Shared_library).
-* Frankly I just needed a somewhat clever name for this site and that was the first thing that popped into my head.  The prior bullet point is merely a post-hoc justification / metaphor.
+* Frankly I just needed a somewhat clever name for this site and that was the first thing that popped into my head.  The prior bullet point is merely a post-hoc justification.
 
 Photo Credit: [Joaquin Ruales](http://joaquin.rual.es/)
